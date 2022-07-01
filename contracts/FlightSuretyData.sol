@@ -216,11 +216,7 @@ contract FlightSuretyData {
                             returns(bool)
     {
         bytes32 key = getFlightKey(_airline, filght, _date);
-<<<<<<< HEAD
         require(isFlightRegistered(key) == false, "is not registered");
-=======
-        require(isFlightRegistered(key) == false, "isFlightRegistered(key), setFlight function.");
->>>>>>> main
         flights[key] = Flight({
             isRegistered : true,
             statusCode : 0,
@@ -290,32 +286,18 @@ contract FlightSuretyData {
                             payable
                             returns(bool)
     {
-<<<<<<< HEAD
         bytes32 insuranceId = getInsuranceId(flight, passenger);
         require(insuranceList[insuranceId].isTaken == false, "This insurance is already purchased.");
         insuranceList[insuranceId].insuranceAmount = insuranceAmount;
         insuranceList[insuranceId].passenger = passenger;
         insuranceList[insuranceId].isTaken = true;
         passengerList[flight].push(passenger);
-=======
-        bytes32 insuranceId = getInsuranceId(flightKey, _passenger);
-        require(insuranceList[insuranceId].isTaken == false, "This insurance is already purchased.");
-        insuranceList[insuranceId].insuranceAmount = insuranceAmount;
-        insuranceList[insuranceId].passenger = _passenger;
-        insuranceList[insuranceId].isTaken = true;
-        passengerList[flightKey].push(_passenger);
->>>>>>> main
         return(true);
     }
 
     function getInsurance(bytes32 key, address _passenger) public view returns(uint256, bool){
-<<<<<<< HEAD
         bytes32 insuranceId = getInsuranceId(key, _passenger);
         return (insuranceList[insuranceId].insuranceAmount, insuranceList[insuranceId].isTaken);
-=======
-        bytes32 manId = getInsuranceId(key, _passenger);
-        return (insuranceList[manId].insuranceAmount, insuranceList[manId].isTaken);
->>>>>>> main
     }
 
     /**
