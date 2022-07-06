@@ -7,11 +7,6 @@ import './flightsurety.css';
     let result = null;
 
     let contract = new Contract('localhost', () => {
-<<<<<<< HEAD
-=======
-
-        // Read transaction
->>>>>>> main
         let airline = DOM.elid('airline-name').value;
         let flight = DOM.elid('flight-name').value;
         let timestamp = DOM.elid('timestamp-id').value;
@@ -19,7 +14,6 @@ import './flightsurety.css';
             display('Operational Status', 'Check if contract is operational', [ { label: 'Operational Status', error: error, value: result} ]);
         });
 
-<<<<<<< HEAD
         DOM.elid('register-airline').addEventListener('click', () => {
             let airLineAddrress = DOM.elid('airline-address').value;
             contract.registerAirline(airLineAddrress)
@@ -43,18 +37,6 @@ import './flightsurety.css';
             contract.registerFlight(airLineAddrress, filghtNumber, date);
         });
 
-=======
-
-        DOM.elid('submit-oracle').addEventListener('click', () => {
-            let airline = DOM.elid('airline-name').value;
-            let flight = DOM.elid('flight-name').value;
-            let timestamp = DOM.elid('timestamp-id').value;
-            // Write transaction
-            contract.fetchFlightStatus(airline, flight, timestamp, (error, result) => {
-                display('Oracles', 'Trigger oracles', [ { label: 'Fetch Flight Status', error: error, value: result.flight + ' ' + result.timestamp}]);
-            });
-        })
->>>>>>> main
         DOM.elid('buy-insurance').addEventListener('click', () => {
             let passenger = DOM.elid('passenger-address').value;
             let airline = DOM.elid('airline-name').value;
@@ -65,7 +47,6 @@ import './flightsurety.css';
             contract.buyInsurance(airline, passenger, flightName, timestamp, insuranceAmount, (error, result) => {
                 display('Buy Insurance: ','insurance button', [ { label: 'Buy Insurance: ', error: error } ]);
             })
-<<<<<<< HEAD
         });
 
         DOM.elid('submit-oracle').addEventListener('click', () => {
@@ -78,24 +59,6 @@ import './flightsurety.css';
             });
         })
 
-=======
-        })
-
-
-        DOM.elid('register-airline').addEventListener('click', () => {
-            let airLineAddrress = DOM.elid('airline-address').value;
-            contract.registerAirline(airLineAddrress)
-            .send({from: this.owner, gas:650000}, (error, result) => {
-                console.log(airLineAddrress + ' registered');
-            });
-            contract.fund()
-            .send({from: airLineAddrress, value: 10000000000000000000, gas:650000}, (error, result) => {
-                console.log(this.airlines[i] + ' funded');
-            });
-        })
-
-
->>>>>>> main
     });
     
 

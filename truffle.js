@@ -1,10 +1,6 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const private_keys = ['6d921f280ae37c7ec5c5077ac9654ca1bf96d05898a0aa4da3b380da3ce6ced5']
-<<<<<<< HEAD
 var mnemonic = "mechanic august pig prize feature slot right wait frequent grit fitness print"; 
-=======
-var mnemonic = "sentence drink radar swear chef garden burden shrug jewel slot polar route"; 
->>>>>>> main
 
 // truffle migrate --reset --network rinkeby
 

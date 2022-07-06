@@ -6,19 +6,13 @@ body {
 }
 
 .container {
-<<<<<<< HEAD
     margin-top: 50px;
     background-color: rgb(245, 95, 95);
-=======
-    margin-top: 400px;
-    background-color: rgb(92, 92, 92);
->>>>>>> main
     opacity: 0.9;
     color: rgb(220, 235, 230);
     padding: 40px;
 }
 
-<<<<<<< HEAD
 
 .airline {
     margin-top: 40px;
@@ -31,10 +25,6 @@ body {
 .top-20 {
     margin-top: 20px;
     background-color: rgb(245, 95, 95);
-=======
-.top-20 {
-    margin-top: 20px;
->>>>>>> main
 }
 
 h5 {
@@ -60,13 +50,10 @@ label.form {
 }
 input {
     margin-right: 20px;
-<<<<<<< HEAD
 }
 
 
 .buttons{
     margin-right: 10px;
     margin-left: 10px;
-=======
->>>>>>> main
 }
